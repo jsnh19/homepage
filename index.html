@@ -21,6 +21,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="js/loadText.js"></script>
+   
   </head>
 
   <body>
@@ -38,9 +41,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active" id="homebutton"><a href="#">Home</a></li>
+            <li><a href="#about" class = "about">About</a></li>
+            <li><a href="#contact" class = "contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -49,8 +52,12 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
+		  <!-- loads content from a file -->
+		  <script>$(".starter-template").load("text/latest.html");</script>
+		  
+		<!-- <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        -->
       </div>
 
     </div><!-- /.container -->
@@ -61,6 +68,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
